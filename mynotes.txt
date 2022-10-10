@@ -1,0 +1,61 @@
+Storybook for react apps
+
+Module 0:
+Created new react app for storybook basics
+Steps:
+npx create-react-app@5 learning-project --template typescript
+cd learning-project
+npx sb init
+
+Learned
+ 1. Created stories
+2. Decorators in story level, global level
+3. Learned essential addons.
+4. Customize storybook theme.
+
+
+Module 1:
+Written atomic components: Badge And review
+Added Global decorators and added theming support
+Theme switching with globals and parameters in decorators
+Connecting figma to storybook(plain figma and figma with attributes access)
+Written story for composing component (restaurant card component design)
+
+Module 2:
+Lesson 1:
+	Splitting RestaurantsSection into two
+	 1. presentation component(receives input and outputs events)
+	 2.container component (Container component, takes care of logic and passes info down to 				presentational component).
+(We just practiced above one will remove above this in lesson 2)
+Lesson  2:
+	skipping api call in hooks.ts (see for changes)
+Lesson 3:
+Mock requests
+yarn add msw msw-storybook-addon -D
+npx msw init public/
+
+// .storybook/main.ts
+module.exports = {
+  staticDirs: ['../public'],
+  // ..other properties
+}
+
+File changes there see for changes in decorators.ts, restarantsection.js, restaurant section.stories.js files.
+Mocked api data using msw.
+
+
+Module 3:
+Adding page template in storybook already have component showing that in storybook
+Changes in pagetemplate folder files.
+
+Adding homepage in storybook
+Changes in homepage folder(homepage.stories.tsx created)
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,8 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Restaurant } from '../types'
 
 import { api } from './index'
+// enabling below doesnot make api call when running storybook
+// import { api } from './conditional-logic'
 
 export const useFetchRestaurants = () => {
   const [status, setStatus] = useState('idle')
