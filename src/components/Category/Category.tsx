@@ -32,7 +32,7 @@ const Container = styled.figure<{ round: boolean }>(
     }
 
     @media ${breakpoints.M} {
-      padding: ${round ? '1.6rem 0' : '0'};
+      padding: ${round ? '1.7rem 0' : '0'};
     }
   `
 )
