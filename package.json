@@ -32,7 +32,7 @@
     "lint": "eslint --fix .",
     "prettier": "prettier --write .",
     "pre-commit": "lint-staged",
-    "chromatic": "chromatic --exit-zero-on-changes"
+    "chromatic": "npx chromatic --project-token=173c1c598052"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -100,5 +100,7 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "course-app@0.1.0"
 }
