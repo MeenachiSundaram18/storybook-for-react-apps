@@ -5,7 +5,11 @@ module.exports = {
     '../src/docs/*.stories.mdx',
     '../src/**/*.stories.@(js|jsx|ts|tsx)',
   ],
-  addons: ['@storybook/addon-essentials', '@storybook/preset-create-react-app', 'storybook-addon-designs'],
+  // enable playback controls feature (Might be default later, but required in 6.4)
+  features: {
+    interactionsDebugger: true,
+  },
+  addons: ['@storybook/addon-essentials', '@storybook/preset-create-react-app', 'storybook-addon-designs', '@storybook/addon-interactions',],
   framework: '@storybook/react',
   core: {
     builder: 'webpack5',

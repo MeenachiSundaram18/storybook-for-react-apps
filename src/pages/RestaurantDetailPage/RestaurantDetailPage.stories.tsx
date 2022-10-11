@@ -1,5 +1,6 @@
-import { expect } from '@storybook/jest'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { within, userEvent } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
 import { RestaurantDetailPage } from './RestaurantDetailPage'
 
@@ -31,7 +32,6 @@ Success.parameters = {
 }
 
 export const WithModalOpen = Template.bind({})
-// reuse the parameters from Success story
 WithModalOpen.parameters = {
   ...Success.parameters,
 }
