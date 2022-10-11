@@ -5,7 +5,7 @@ import { Body } from '../typography'
 const Container = styled.div(
   // access design tokens from theme via styled-components we can get theme bcoz we have it in app.tsx
   ({ theme: { color, borderRadius } }) => css`
-    padding: 3px 20px;
+    padding: 3px 25px;
     background: ${color.badgeBackground};
     border-radius: ${borderRadius.xs};
     display: inline-block;
