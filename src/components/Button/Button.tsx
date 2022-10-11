@@ -44,7 +44,7 @@ const StyledButton = styled.button<{
     }
 
     @media ${breakpoints.M} {
-      padding: ${withIcon ? '1rem' : large ? '1.125rem 1.5rem' : '0.875rem 1.5rem'};
+      padding: ${withIcon ? '1rem' : large ? '1.125rem 1.6rem' : '0.875rem 1.5rem'};
     }
   `
 )
