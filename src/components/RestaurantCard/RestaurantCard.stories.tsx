@@ -1,4 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
+import { within, userEvent } from '@storybook/testing-library'
+import { expect } from '@storybook/jest'
 
 import { restaurants } from '../../stub/restaurants'
 
@@ -32,6 +34,14 @@ export const Default = Template.bind({})
 Default.args = {
   ...restaurants[0],
 }
+Default.play = async ({ canvasElement, args }) => {
+  // get a canvas from canvasElement which can be used to query elements from within
+  const canvas = within(canvasElement)
+  // click on the restaurant card
+  await userEvent.click(canvas.getByTestId('restaurant-card'))
+  // assert that the onClick spy was called
+  await expect(args.onClick).toHaveBeenCalled()
+}
 
 // every below templates reusing args from Default story
 export const New = Template.bind({})
@@ -44,6 +54,12 @@ export const Closed = Template.bind({})
 Closed.args = {
   ...Default.args,
   isClosed: true,
+}
+Closed.play = async ({ canvasElement, args }) => {
+  const canvas = within(canvasElement)
+  await userEvent.click(canvas.getByTestId('restaurant-card'))
+  // this should fail because onClick should not be called
+  await expect(args.onClick).not.toHaveBeenCalled()
 }
 
 export const Loading = Template.bind({})
